@@ -22,6 +22,10 @@ role:
 roleBinding:
   name: nginx-rolebinding
 
+pv:
+  name: nginx-pv
+  path: /mnt
+
 pvc:
   name: nginx-pvc
   storage: 5Gi
