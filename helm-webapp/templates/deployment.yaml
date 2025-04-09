@@ -27,6 +27,9 @@ spec:
             name: {{ .Values.configmap.name }}
         - secretRef:
             name: {{ .Values.secret.name }}
+        volumeMounts:
+        - mountPath: /usr/share/nginx/html   # example mount point
+          name: nginx-storage
         resources:
           requests:
             memory: "16Mi" 
@@ -34,3 +37,8 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "100m"
+    volumes:
+    - name: nginx-storage
+      persistentVolumeClaim:
+        claimName: {{ .Values.pvc.name }}
+    
