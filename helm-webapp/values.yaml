@@ -6,7 +6,7 @@ configmap:
     CUSTOM_HEADER: 'ROSA Assessment - Prabhakar'
 
 image:
-  name: venkateshvgs/rosaargocd
+  name: prabhukaran1989/argocdrosa
   tag: latest
 
 secret:
