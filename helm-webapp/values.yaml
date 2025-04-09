@@ -8,3 +8,20 @@ configmap:
 image:
   name: eyesoncloud/webapp
   tag: 47
+
+secret:
+  name: nginx-secret
+  appKey: MySecretKey123
+
+serviceAccount:
+  name: nginx-sa
+
+role:
+  name: nginx-role
+
+roleBinding:
+  name: nginx-rolebinding
+
+pvc:
+  name: nginx-pvc
+  storage: 5Gi
