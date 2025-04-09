@@ -16,6 +16,7 @@ spec:
         app: {{ .Values.appName }}
         tier: frontend
     spec: # Pod spec
+      serviceAccountName: {{ .Values.serviceAccount.name }}
       containers:
       - name: mycontainer
         image: "{{ .Values.image.name }}:{{ .Values.image.tag }}"
@@ -24,6 +25,8 @@ spec:
         envFrom:
         - configMapRef:
             name: {{ .Values.configmap.name }}
+        - secretRef:
+            name: {{ .Values.secret.name }}
         resources:
           requests:
             memory: "16Mi" 
