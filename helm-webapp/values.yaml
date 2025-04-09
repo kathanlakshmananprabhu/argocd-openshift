@@ -6,8 +6,8 @@ configmap:
     CUSTOM_HEADER: 'Welcome to NGINX on ROSA! By Venkatesh'
 
 image:
-  name: eyesoncloud/webapp
-  tag: 47
+  name: venkateshvgs/rosaargocd
+  tag: latest
 
 secret:
   name: nginx-secret
